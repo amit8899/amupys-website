@@ -1,44 +1,41 @@
-# Amupys website
+# Amupys Website v2
 
-This is a simple static website for the Amupys Android apps.
+Pages:
+- index.html
+- apps/beats.html
+- apps/getmp3.html
+- apps/social.html
+- support.html
+- privacy.html
+- terms.html
 
-## Files
-- `index.html` - main website
-- `styles.css` - responsive styling
-- `app.js` - APK download URL configuration
+## APK versions
+Edit only `app-data.js`.
 
-## Add APK links
-Open `app.js` and replace the empty values:
+Each app already has 6 slots:
+- Latest version
+- Previous version 1
+- Previous version 2
+- Previous version 3
+- Previous version 4
+- Previous version 5
 
-```js
-const APK_URLS = {
-  beats: "https://downloads.example.com/beats-latest.apk",
-  getmp3: "https://downloads.example.com/getmp3-latest.apk",
-  social: "https://downloads.example.com/social-latest.apk"
-};
-```
+Example:
+{label:"Latest version",version:"3.2.1",date:"2026-10-18",size:"24.8 MB",url:"https://.../social-3.2.1.apk"}
 
-## Recommended free hosting
-Use Cloudflare Pages for the website.
+Buttons stay disabled until `url` is filled.
 
-1. Create a Git repository containing these files.
-2. In Cloudflare Dashboard, open Workers & Pages.
-3. Create a Pages project and connect the repository.
-4. This site needs no build command. Set the output directory to the repository root.
-5. Cloudflare will provide a `*.pages.dev` URL.
-6. Optionally connect a custom domain later.
+## Support form
+The support page collects name, email, application, subject and description.
+It opens a pre-filled email to:
+amupis232389@gmail.com
 
-## APK hosting
-Do not put large APKs directly into Cloudflare Pages because individual Pages assets have a size limit.
+This requires no backend. If you later want direct server-side sending, add a Cloudflare Worker endpoint or transactional email provider. Never put SMTP credentials in frontend JavaScript.
 
-A good setup is:
-- Website: Cloudflare Pages
-- APK files: Cloudflare R2 Standard storage
-- Optional custom APK host: `downloads.yourdomain.com`
+## Deploy
+Replace the existing site files in your repository with this package, commit, and push. Cloudflare will redeploy automatically if your project is Git-connected.
 
-If you do not want to set up R2 initially, you can host APK release files elsewhere and paste those direct URLs in `app.js`.
-
-## Important Android signing note
-If you expect a website-downloaded APK to update an app originally installed from Google Play,
-the APK must be signed with the same app-signing certificate as the installed application.
-Verify your Play App Signing setup before publishing direct APK downloads.
+Before final publishing:
+- replace UPDATE_ME values
+- add APK URLs
+- replace Privacy/Terms placeholders with final legal text
