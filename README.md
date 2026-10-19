@@ -36,3 +36,44 @@ The three Google Sites URLs are app privacy-policy pages, not app websites. The 
 
 ## Website privacy policy
 `privacy.html` is a separate Amupys website-wide privacy policy adapted from the app-specific policies.
+
+
+## Fixed asset locations
+
+Main page now uses the actual uploaded files:
+- Beats icon: `assets/apps/beats/icon.png`
+- Beats preview: `assets/apps/beats/screenshots/beats1.jpg`
+- GetMp3 icon: `assets/apps/getmp3/icon.png`
+- GetMp3 preview: `assets/apps/getmp3/screenshots/Screenshot00001.png`
+- Social icon: `assets/apps/social/social_logo_512.jpg`
+- Social preview: `assets/apps/social/screenshots/Screenshot00001.png`
+
+To change the preview image on the main page, edit the corresponding `<img src="...">` in `index.html`.
+
+The individual app screenshot galleries are controlled from the `screenshots` arrays in `app-data.js`.
+
+## Privacy policy links
+
+The three Google Sites URLs are now configured as `privacyUrl` in `app-data.js`.
+The `Privacy Policy` button on each app detail page reads that field.
+
+## Favicon
+
+The website favicon is `assets/brand/favicon.png`, generated from the Amupys organization logo.
+
+
+## v5 homepage changes
+
+- Removed the large Amupys logo from the right side of the hero.
+- The hero now shows Social - Media Downloader as the featured app.
+- App cards on the homepage are fully clickable and open the dedicated app page.
+- The old `View app` button was removed.
+- Homepage cards now show `Download APK` and `Google Play` buttons.
+- APK buttons are placeholders until you add real URLs.
+
+
+## v6 Google Play badge
+All Google Play buttons now use the official badge image from Wikimedia Commons:
+https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg
+
+The whole badge remains clickable and links to each app's Play Store listing.

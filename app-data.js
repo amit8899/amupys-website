@@ -7,7 +7,7 @@ window.AMUPYS_APPS = {
     packageName: "com.beats.musicplayer10",
     playUrl:
       "https://play.google.com/store/apps/details?id=com.beats.musicplayer10",
-    websiteUrl: "https://sites.google.com/view/beatsmusicplayer/home",
+    privacyUrl: "https://sites.google.com/view/beatsmusicplayer/home",
     icon: "../assets/apps/beats/icon.png",
     description:
       "A polished offline music player for Android with playlists, equalizer, lyrics, queue controls and customization.",
@@ -100,7 +100,7 @@ window.AMUPYS_APPS = {
     category: "Music Downloader",
     packageName: "com.amupys.getmp3",
     playUrl: "https://play.google.com/store/apps/details?id=com.amupys.getmp3",
-    websiteUrl:
+    privacyUrl:
       "https://sites.google.com/view/getmp3-mp3-music-downloader/home",
     icon: "../assets/apps/getmp3/icon.png",
     description:
@@ -186,7 +186,7 @@ window.AMUPYS_APPS = {
     packageName: "com.amupys.socialbuddy",
     playUrl:
       "https://play.google.com/store/apps/details?id=com.amupys.socialbuddy",
-    websiteUrl: "https://sites.google.com/view/social-mediadownloader/home",
+    privacyUrl: "https://sites.google.com/view/social-mediadownloader/home",
     icon: "../assets/apps/social/social_logo_512.jpg",
     description:
       "Download supported media, manage downloads, browse with bookmarks, organize files and protect private content.",
