@@ -1,41 +1,38 @@
-# Amupys Website v2
+# Amupys Website v3
 
-Pages:
-- index.html
-- apps/beats.html
-- apps/getmp3.html
-- apps/social.html
-- support.html
-- privacy.html
-- terms.html
+## Changes
+- Uses the Amupys organisation logo in header and homepage hero.
+- Better mobile layout for app icon + application name.
+- Added each app's existing Google Sites website as an Official website button.
+- Google Play buttons include a Play icon.
+- Each application page has a screenshot gallery.
+- Keeps latest + 5 previous APK release slots.
+
+## Add screenshots
+1. Put files in one of these folders:
+   - assets/apps/beats/screenshots/
+   - assets/apps/getmp3/screenshots/
+   - assets/apps/social/screenshots/
+2. Open app-data.js.
+3. Add file paths to the app's `screenshots` array. Example:
+
+```js
+screenshots: [
+  "../assets/apps/social/screenshots/home.png",
+  "../assets/apps/social/screenshots/day-night.png",
+  "../assets/apps/social/screenshots/download-manager.png"
+],
+```
+
+## Replace app icons
+Put your real app icons under `assets/apps/<app>/` and update the `icon:` field in app-data.js.
 
 ## APK versions
-Edit only `app-data.js`.
+Update only the `versions` array in app-data.js. There are 6 slots per app.
 
-Each app already has 6 slots:
-- Latest version
-- Previous version 1
-- Previous version 2
-- Previous version 3
-- Previous version 4
-- Previous version 5
 
-Example:
-{label:"Latest version",version:"3.2.1",date:"2026-10-18",size:"24.8 MB",url:"https://.../social-3.2.1.apk"}
+## Privacy link correction
+The three Google Sites URLs are app privacy-policy pages, not app websites. The app detail buttons now say `Privacy Policy`.
 
-Buttons stay disabled until `url` is filled.
-
-## Support form
-The support page collects name, email, application, subject and description.
-It opens a pre-filled email to:
-amupis232389@gmail.com
-
-This requires no backend. If you later want direct server-side sending, add a Cloudflare Worker endpoint or transactional email provider. Never put SMTP credentials in frontend JavaScript.
-
-## Deploy
-Replace the existing site files in your repository with this package, commit, and push. Cloudflare will redeploy automatically if your project is Git-connected.
-
-Before final publishing:
-- replace UPDATE_ME values
-- add APK URLs
-- replace Privacy/Terms placeholders with final legal text
+## Website privacy policy
+`privacy.html` is a separate Amupys website-wide privacy policy adapted from the app-specific policies.
