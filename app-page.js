@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const r = document.createElement("div");
     r.className = "version-row";
     const cls = v.url ? "btn primary small" : "btn secondary small disabled";
-    r.innerHTML = `<div class="version-name"><strong>${v.label}</strong><span>${i === 0 ? "Recommended release" : "Older release"}</span></div><div class="meta-muted">${v.version}</div><div class="meta-muted">${v.date}</div><div class="meta-muted">${v.size}</div><div><a class="${cls}" href="${v.url || "#"}" ${v.url ? 'target="_blank" rel="noopener"' : ""}>${v.url ? "Download APK" : "Add APK URL"}</a></div>`;
+    r.innerHTML = `<div class="version-name"><strong>${v.label}</strong><span>${i === 0 ? "Recommended release" : "Older release"}</span></div><div class="meta-muted">${v.version}</div><div class="meta-muted">${v.date}</div><div class="meta-muted">${v.size}</div><div><a class="${cls}" href="${v.url || "#"}" ${v.url ? 'target="_blank" rel="noopener"' : ""}>Download APK</a></div>`;
     vr.appendChild(r);
   });
 });

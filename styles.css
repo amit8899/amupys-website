@@ -167,3 +167,80 @@ body{margin:0;font-family:Inter,Arial,sans-serif;background:#07101f;color:#f4f8f
 .btn:has(.google-play-badge){padding:0;background:transparent;border:0;box-shadow:none;}
 .btn:has(.google-play-badge):hover{transform:translateY(-2px);}
 @media(max-width:650px){.google-play-badge{width:138px;}}
+
+
+/* Production button alignment */
+.app-card-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-height:48px;
+}
+.google-play-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:46px;
+  padding:0;
+  margin:0;
+  border:0;
+  background:transparent;
+  border-radius:8px;
+  line-height:0;
+  transition:transform .18s ease;
+}
+.google-play-link:hover{transform:translateY(-2px)}
+.google-play-badge{
+  display:block;
+  width:auto;
+  height:46px;
+  max-width:none;
+}
+.app-card-actions .btn.small{
+  height:46px;
+  padding:0 17px;
+  margin:0;
+  display:inline-flex;
+  align-items:center;
+}
+.app-page-play{
+  height:54px;
+}
+.app-page-play .google-play-badge{
+  height:54px;
+}
+@media(max-width:650px){
+  .app-card-actions{gap:9px;flex-wrap:wrap}
+  .google-play-link,.google-play-badge{height:42px}
+  .app-card-actions .btn.small{height:42px;padding:0 14px}
+  .app-page-play,.app-page-play .google-play-badge{height:48px}
+}
+
+
+/* v8: APK navigation */
+html{
+  scroll-behavior:smooth;
+}
+#versions{
+  scroll-margin-top:96px;
+}
+
+/* Keep top app-page actions balanced */
+.app-hero .actions{
+  align-items:center;
+}
+.app-hero .actions .btn{
+  min-height:48px;
+}
+.app-hero .actions .play-store-badge,
+.app-hero .actions img[alt*="Google Play"]{
+  height:48px;
+  width:auto;
+  display:block;
+}
+
+/* Homepage action buttons point to the version archive instead of starting an immediate download.
+   This keeps older releases discoverable. */
+.app-card-actions{
+  align-items:center;
+}
