@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
     e.src = app.icon;
     e.alt = `${app.name} icon`;
   });
+  document.querySelectorAll("[data-hero-image]").forEach((e) => {
+    e.src = app.heroImage;
+    e.alt = `${app.name} feature graphic`;
+  });
   document
     .querySelectorAll("[data-play-link]")
     .forEach((e) => (e.href = app.playUrl));

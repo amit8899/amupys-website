@@ -9,7 +9,7 @@ window.AMUPYS_APPS = {
       "https://play.google.com/store/apps/details?id=com.beats.musicplayer10",
     privacyUrl: "https://sites.google.com/view/beatsmusicplayer/home",
     icon: "../assets/apps/beats/icon.png",
-    heroImage: "../assets/apps/beats/landscape/feature-graphic.jpg",
+    heroImage: "../assets/apps/beats/landscape/feature-graphic.png",
     description:
       "A polished offline music player for Android with playlists, equalizer, lyrics, queue controls and customization.",
     screenshots: [
@@ -104,7 +104,7 @@ window.AMUPYS_APPS = {
     privacyUrl:
       "https://sites.google.com/view/getmp3-mp3-music-downloader/home",
     icon: "../assets/apps/getmp3/icon.png",
-    heroImage: "../assets/apps/getmp3/landscape/feature-graphic.jpg",
+    heroImage: "../assets/apps/getmp3/landscape/feature-graphic.png",
     description:
       "Search and manage supported audio downloads with a lightweight interface built around fast discovery and offline access.",
     screenshots: [
@@ -190,7 +190,7 @@ window.AMUPYS_APPS = {
       "https://play.google.com/store/apps/details?id=com.amupys.socialbuddy",
     privacyUrl: "https://sites.google.com/view/social-mediadownloader/home",
     icon: "../assets/apps/social/social_logo_512.jpg",
-    heroImage: "../assets/apps/social/landscape/feature-graphic.jpg",
+    heroImage: "../assets/apps/social/landscape/feature-graphic.png",
     description:
       "Download supported media, manage downloads, browse with bookmarks, organize files and protect private content.",
     screenshots: [

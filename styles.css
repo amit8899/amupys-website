@@ -327,3 +327,155 @@ html{
     border-radius:18px;
   }
 }
+
+
+/* v11 production fixes */
+html{scroll-behavior:smooth}
+#versions{scroll-margin-top:92px}
+
+.hero-landscape-panel{
+  height:auto !important;
+  aspect-ratio:1024 / 500;
+  overflow:hidden;
+  border-radius:22px;
+  background:#0a1220;
+}
+.hero-landscape-panel img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.app-detail-actions{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:20px;
+}
+.app-detail-actions .google-play-link,
+.app-detail-actions .google-play-badge{
+  height:48px;
+}
+.app-detail-actions .google-play-badge{
+  width:auto;
+  display:block;
+}
+.app-detail-actions .btn{
+  min-height:48px;
+}
+.app-privacy-link{
+  white-space:nowrap;
+}
+
+.app-card[data-href]{
+  cursor:pointer;
+}
+.app-card[data-href]:focus-visible{
+  outline:2px solid #70adff;
+  outline-offset:3px;
+}
+.app-card-actions{
+  position:relative;
+  z-index:3;
+}
+
+@media(max-width:650px){
+  .app-detail-actions{
+    gap:10px;
+  }
+  .app-detail-actions .google-play-link,
+  .app-detail-actions .google-play-badge{
+    height:46px;
+  }
+  .app-detail-actions .btn{
+    min-height:46px;
+    padding:10px 14px;
+  }
+  .hero-landscape-panel{
+    border-radius:18px;
+  }
+}
+
+/* v11 button visual consistency — production override */
+:root{
+  --action-bg:#0b0b0b;
+  --action-border:#777;
+  --action-text:#fff;
+  --action-radius:8px;
+  --action-height:54px;
+}
+
+/* Shared action row alignment */
+.app-card-actions,
+.app-detail-actions{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+/* Download APK + Privacy Policy share the Google Play badge visual language */
+.apk-home-btn,
+.app-download-jump,
+.app-privacy-link{
+  height:var(--action-height) !important;
+  min-height:var(--action-height) !important;
+  padding:0 20px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  border-radius:var(--action-radius) !important;
+  border:1px solid var(--action-border) !important;
+  background:var(--action-bg) !important;
+  color:var(--action-text) !important;
+  box-shadow:none !important;
+  font-size:15px !important;
+  line-height:1 !important;
+  font-weight:750 !important;
+  white-space:nowrap;
+}
+
+.apk-home-btn:hover,
+.app-download-jump:hover,
+.app-privacy-link:hover{
+  background:#161616 !important;
+  border-color:#9a9a9a !important;
+  transform:translateY(-2px);
+}
+
+/* Google Play badge: same visual height and aligned baseline */
+.google-play-link,
+.app-page-play{
+  height:var(--action-height) !important;
+  min-height:var(--action-height) !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  background:transparent !important;
+  border-radius:var(--action-radius) !important;
+  overflow:hidden;
+  flex:0 0 auto;
+}
+.google-play-link .google-play-badge,
+.app-page-play .google-play-badge{
+  height:var(--action-height) !important;
+  width:auto !important;
+  display:block !important;
+  margin:0 !important;
+  border-radius:var(--action-radius) !important;
+}
+
+@media(max-width:650px){
+  :root{--action-height:48px;}
+  .apk-home-btn,
+  .app-download-jump,
+  .app-privacy-link{
+    padding:0 16px !important;
+    font-size:14px !important;
+  }
+}
