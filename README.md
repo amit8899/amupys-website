@@ -77,3 +77,22 @@ All Google Play buttons now use the official badge image from Wikimedia Commons:
 https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg
 
 The whole badge remains clickable and links to each app's Play Store listing.
+
+
+## v10 - Dedicated app hero image
+
+The right side of each dedicated app page now uses a landscape feature graphic instead of repeating the app icon.
+
+Recommended size:
+- 1024 x 500 px
+- JPG or PNG
+- landscape orientation
+
+Default paths:
+- Beats: `assets/apps/beats/landscape/feature-graphic.jpg`
+- GetMp3: `assets/apps/getmp3/landscape/feature-graphic.jpg`
+- Social: `assets/apps/social/landscape/feature-graphic.jpg`
+
+After adding the files, the app pages load them automatically from `heroImage` in `app-data.js`.
+
+If you use different filenames, update the relevant `heroImage` value in `app-data.js`.
