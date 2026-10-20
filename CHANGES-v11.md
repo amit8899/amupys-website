@@ -48,3 +48,13 @@ Behavior:
 - Download APK and Privacy Policy now use the same dark button color, border, corner radius, and hover behavior.
 - Homepage Download APK buttons use the same production styling.
 - The user-provided CityPNG badge was reviewed as a visual reference, but its page states commercial use is not authorized; the existing Google Play badge asset is retained while matching the other buttons to its design.
+
+## Unified action-button design update
+- Removed the Google Play badge image from homepage and all dedicated app pages.
+- Google Play is now a website-native text button with a play/store-style icon.
+- Download APK uses the same button treatment with a download icon.
+- Privacy Policy uses the same treatment with a privacy/shield icon.
+- All three actions now share identical height, corner radius, background, border, typography and hover behavior.
+- Homepage keeps the same navigation behavior: card body -> app page, Download APK -> app page #versions, Google Play -> Play Store.
+- Dedicated pages keep: Google Play -> Play Store, Download APK -> smooth scroll, Privacy Policy -> app policy.
+- Icons are embedded as lightweight inline SVG so production does not depend on a third-party icon host.
